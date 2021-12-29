@@ -153,10 +153,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ErrorClass.cpp" />
     <ClCompile Include="MoodCalendar.cpp" />
     <ClCompile Include="NoteClass.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ErrorClass.h" />
+    <ClInclude Include="pch.h" />
     <ClInclude Include="NoteClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

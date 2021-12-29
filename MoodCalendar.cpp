@@ -1,5 +1,4 @@
-#include <iostream>
-#include <SDL.h>
+#include "pch.h"
 
 // You shouldn't really use this statement, but it's fine for small programs
 using namespace std;
