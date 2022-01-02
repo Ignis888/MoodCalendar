@@ -88,10 +88,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\SDL2\include;$(SolutionDir)\SDL2_image\include;$(SolutionDir)\SDL2_ttf\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)\SDL2\lib\x86;$(SolutionDir)\SDL2_image\lib\x86;$(SolutionDir)\SDL2_ttf\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -102,12 +105,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\SDL2\include;$(SolutionDir)\SDL2_image\include;$(SolutionDir)\SDL2_ttf\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)\SDL2\lib\x86;$(SolutionDir)\SDL2_image\lib\x86;$(SolutionDir)\SDL2_ttf\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -139,11 +145,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="ErrorsEtcClass.cpp" />
+    <ClCompile Include="Inscription.cpp" />
     <ClCompile Include="MoodCalendar.cpp" />
-    <ClCompile Include="NoteClass.cpp" />
+    <ClCompile Include="ClassSdl.cpp" />
+    <ClCompile Include="StepText.cpp" />
+    <ClCompile Include="TexClass.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="NoteClass.h" />
+    <ClInclude Include="Button.h" />
+    <ClInclude Include="ErrorsEtcClass.h" />
+    <ClInclude Include="Inscription.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="ClassSdl.h" />
+    <ClInclude Include="StepText.h" />
+    <ClInclude Include="TexClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

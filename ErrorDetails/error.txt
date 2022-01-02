@@ -1,0 +1,263 @@
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	1:00 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	20:54 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	20:58 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	20:59 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:02 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:20 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:20 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:23 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:23 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:23 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:23 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:26 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:26 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:27 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:28 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:28 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:29 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:29 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:29 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:29 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:31 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:53 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:54 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:55 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:57 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:58 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:59 25.11.21
+
+
+Unable to load image: Resources/sign.png
+	Couldn't open Resources/sign.png
+	21:59 25.11.21
+
+
+
+ FATAL ERROR
+Fonts could not initialize
+	
+	20:21 26.11.21
+
+
+
+ FATAL ERROR
+Fonts could not initialize
+	
+	20:24 26.11.21
+
+
+
+ FATAL ERROR
+Fonts could not initialize
+	
+	20:26 26.11.21
+
+
+
+ FATAL ERROR
+Fonts could not initialize
+	
+	20:27 26.11.21
+
+
+
+ FATAL ERROR
+Fonts could not initialize
+	
+	20:29 26.11.21
+
+
+
+ FATAL ERROR
+Fonts could not initialize
+	
+	20:35 26.11.21
+
+
+
+ FATAL ERROR
+Fonts could not initialize
+	
+	20:35 26.11.21
+
+
+
+ FATAL ERROR
+Fonts could not initialize
+	
+	20:35 26.11.21
+
+
+
+ FATAL ERROR
+Fonts could not initialize
+	
+	20:35 26.11.21
+
+
+
+ FATAL ERROR
+Fonts could not initialize
+	
+	20:37 26.11.21
+
+
+
+ FATAL ERROR
+Fonts could not initialize
+	
+	21:58 26.11.21
+
+
+
+ FATAL ERROR
+Fonts could not initialize
+	
+	21:59 26.11.21
+
+
+
+ FATAL ERROR
+Fonts could not initialize
+	
+	22:00 26.11.21
+
+
+
+ FATAL ERROR
+Fonts could not initialize
+	
+	22:00 26.11.21
+
+
+Can't open 
+	English/test
+	23:18 29.11.21
+
+
+Can't open 
+	English/test
+	23:19 29.11.21
+
+
+Can't open 
+	English/test
+	23:19 29.11.21
+
+
+Can't open 
+	English/test
+	23:21 29.11.21
+
+
+Can't open 
+	English/test
+	23:22 29.11.21
+

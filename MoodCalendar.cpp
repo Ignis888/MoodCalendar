@@ -1,8 +1,19 @@
 
-#include <iostream>
 
-int main()
+#include "ClassSdl.h"
+
+
+int main(int argc, char* args[])
 {
-    std::cout << "Hello World!\n";
+
+	ClassSdl SdlC;
+	while (!SdlC.exitprogram)
+	{
+		SdlC.RunProgram();
+	}
+
+
+	return true;
+
 }
 
