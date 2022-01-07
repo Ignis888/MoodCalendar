@@ -43,11 +43,18 @@ void ClassSdl::LoadMedia()
 	big_font = TTF_OpenFont("Resources/arial.ttf",36);
 	small_font = TTF_OpenFont("Resources/arial.ttf", 14);
 
+	if (!(big_font && small_font))
+	{
+		TTF_CloseFont(small_font);
+		TTF_CloseFont(big_font);
+		Error("Can't open fonts",TTF_GetError(),1);
+	}
 
-	mainMenu_Step.makeButtons(gRenderer, big_font, language +"/test",0);
-	//take texts
-	TTF_CloseFont(big_font);
-	TTF_CloseFont(small_font);
+	StepText StepTextTMP(mainMenuScreen);
+	StepTextTMP.MakeButtons(gRenderer, big_font, language + "/test", 0);
+	StepTextQ.push_back(StepTextTMP);
+	StepTextTMP.~StepText();
+
 }
 
 void ClassSdl::limitingFrames()
@@ -117,7 +124,7 @@ void ClassSdl::Init()
 	}
 	else
 	{
-		LoadMedia();
+		this->LoadMedia();
 	}
 	step = logoScreen;
 	
@@ -197,24 +204,71 @@ void ClassSdl::checkForWindowEvent()
 
 void ClassSdl::checkForMouseEvent()
 {
+	SDL_PumpEvents();
+	if (eventHandler.type == SDL_MOUSEMOTION)
+	{
+		render = true;
+	}
+	if (step != logoScreen)
+	{
+		nrOfActivated_Button = -1;
+		int x, y, i = 0; // x,y mouse coords; i is itterator
+		SDL_GetMouseState(&x, &y);
+		for (auto& ButtonTMP : StepTextQ[step-1].rightColumn)
+		{
+			if (ButtonTMP.Highlighted(x, y))
+			{
+				nrOfActivated_Button = i;
+			}
+			i++;
+		}
+	}
 	if (eventHandler.type == SDL_MOUSEBUTTONUP)
 	{
 		if (step == logoScreen)
 		{
-			step++;
+			step = mainMenuScreen;
 			render = true;
 			return;
 		}
 		if (eventHandler.button.button == SDL_BUTTON_LEFT)
 		{
+			if (nrOfActivated_Button != -1)
+			{
+				Button& ButtonTMP = StepTextQ[step - 1].rightColumn[nrOfActivated_Button];
+				ButtonTMP.highlighted = false;
+				step = ButtonTMP.next_step;
+			
+			/*else
+				{
+					switch (ButtonTMP.other_reaction)
+					{
+					case 's':
+					{
+
+					}
+					case 'd':
+					{
+
+					}
+					}
+				}
+			*/
+			}
 			//check buttons eventHandler.button.y
 		}
 		else if (eventHandler.button.button == SDL_BUTTON_RIGHT)
 		{
-			step = mainMenuScreen;
+			step = logoScreen;
 			render = true;
 		}
 	}
+	/*
+	for (auto& tmpButton : rightColumn)
+	{
+
+	}
+	*/
 }
 
 void ClassSdl::checkForKeyboardEvent()
@@ -224,7 +278,7 @@ void ClassSdl::checkForKeyboardEvent()
 		if (step == logoScreen)
 		{
 			render = true;
-			step++;
+			step = mainMenuScreen;
 		}
 
 		switch (eventHandler.key.keysym.scancode)
@@ -282,12 +336,12 @@ void ClassSdl::checkForKeyboardEvent_NoteScreen()
 void ClassSdl::Render()
 {
 	SDL_RenderClear(gRenderer);
-	backgroundTEX.render(gRenderer);
+	backgroundTEX.Render(gRenderer);
 	switch (step)
 	{
 	case screen::mainMenuScreen:
 	{
-		mainMenu_Step.render(gRenderer, 0,screenWidth, screenHeight);
+		StepTextQ[0].Render(gRenderer, 0, screenWidth, screenHeight);
 		//	mainMenuScreen();
 		break;
 	}
@@ -328,7 +382,7 @@ void ClassSdl::Render()
 		notePage.h = round(screenHeight * 0.8);
 		notePage.x = round((screenWidth - notePage.w) * 0.5);
 		notePage.y = round(screenHeight * 0.1);
-		noteTEX.render(gRenderer, &notePage);
+		noteTEX.Render(gRenderer, &notePage);
 		break;
 	}
 	default:
@@ -348,7 +402,7 @@ void ClassSdl::Render()
 		}
 		logo.x = round((screenWidth - logo.w) * 0.5);
 		logo.y = round((screenHeight - logo.h) * 0.5);
-		logoTEX.render(gRenderer, &logo);
+		logoTEX.Render(gRenderer, &logo);
 
 	}
 	}
@@ -360,7 +414,7 @@ void ClassSdl::Render()
 		sign.w = floor(screenWidth * 0.1);
 		sign.y = floor(screenHeight * 0.9);
 		sign.h = floor(screenHeight * 0.1);
-		signatureTEX.render(gRenderer, &sign);
+		signatureTEX.Render(gRenderer, &sign);
 	}
 	SDL_RenderPresent(gRenderer);
 
@@ -380,9 +434,19 @@ void ClassSdl::RunProgram()
 	//	SDL_UpdateWindowSurface(gWindow);
 }
 
+void ClassSdl::Free()
+{
+	while (!StepTextQ.empty())
+	{
+		StepTextQ.back().~StepText();
+		StepTextQ.pop_back();
+	}
+}
 ClassSdl::ClassSdl()
 {
+	Free();
 	render = true;
+	nrOfActivated_Button = -1;
 	ShowWindow(GetConsoleWindow(), SW_HIDE);//hide console
 	checkIfDir();
 	step = screen::logoScreen;
@@ -393,6 +457,7 @@ ClassSdl::ClassSdl()
 
 ClassSdl::~ClassSdl()
 {
+	Free();
 	backgroundTEX.~TexClass();
 	logoTEX.~TexClass();
 	signatureTEX.~TexClass();

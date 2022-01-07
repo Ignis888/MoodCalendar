@@ -8,10 +8,10 @@ TexClass::TexClass()
 
 TexClass::~TexClass()
 {
-	free();
+	Free();
 }
 
-void TexClass::free()
+void TexClass::Free()
 {
 	if (mTexture != NULL)
 	{
@@ -20,9 +20,9 @@ void TexClass::free()
 	}
 }
 
-void TexClass::loadFromFile(std::string path,SDL_Renderer *render)
+void TexClass::loadFromFile(std::string path,SDL_Renderer *Render)
 {
-	free();
+	Free();
 
 	SDL_Surface* loadedSurface;
 	loadedSurface = IMG_Load(path.c_str());
@@ -33,7 +33,7 @@ void TexClass::loadFromFile(std::string path,SDL_Renderer *render)
 		Error(error, IMG_GetError(), 0);
 		return;
 	}
-	mTexture = SDL_CreateTextureFromSurface(render, loadedSurface);
+	mTexture = SDL_CreateTextureFromSurface(Render, loadedSurface);
 	if (mTexture == NULL)
 	{
 		std::string error = "Unable to Create Texture from : " + path + " in TexClass.cpp";
@@ -46,12 +46,12 @@ void TexClass::loadFromFile(std::string path,SDL_Renderer *render)
 
 
 
-void TexClass::render(SDL_Renderer* renderer)
+void TexClass::Render(SDL_Renderer* renderer)
 {
 
 	if (mTexture == NULL)
 	{
-			std::string error = "Can't render,Texture don't exist, ";
+			std::string error = "Can't Render,Texture don't exist, ";
 			Error(error, SDL_GetError(), 1);
 	}
 	else
@@ -60,12 +60,12 @@ void TexClass::render(SDL_Renderer* renderer)
 	}
 
 }
-void TexClass::render(SDL_Renderer* renderer, SDL_Rect *object)
+void TexClass::Render(SDL_Renderer* renderer, SDL_Rect *object)
 {
 
 	if (mTexture == NULL)
 	{
-		std::string error = "Can't render,Texture don't exist ";
+		std::string error = "Can't Render,Texture don't exist ";
 		Error(error, SDL_GetError(), 1);
 	}
 	else

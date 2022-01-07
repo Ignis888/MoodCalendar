@@ -6,18 +6,6 @@ class ClassSdl : public StepText
 {
 	private:
 		
-		enum screen
-		{
-			logoScreen = 0,//justo logoa and background
-			mainMenuScreen,//main menu
-			creditsScreen,//dispalys credits and copyright
-			optionsMainScreen,// technical options of program + option to go to change meritorical questions
-			optionsQuestsScreen,	// add/remove various type of questions
-			sumarryScreen,	// need o have at least 5 notes
-			previousNotesScreen,// displays previous notes
-			addNewNoteScreen,	//after using "add new note" option in main menu
-			noteScreen // display to read note
-		};
 
 #pragma region textures_and_objects
 
@@ -28,12 +16,16 @@ class ClassSdl : public StepText
 
 		void LoadMedia();
 
-		StepText mainMenu_Step;
+	/*	StepText mainMenu_Step;
 		StepText credits_Step;
 		StepText optionsQuests_Step;
 		StepText optionsMain_Step;
 		StepText previousNotes_Step;
 		StepText note_Step;
+*/
+//		StepText ActualStep
+		std::deque <StepText> StepTextQ;
+		int nrOfActivated_Button;
 
 		void MainMenuDisplay();//main menu
 		void CreditsDisplay();//dispalys credits and copyright
@@ -43,6 +35,7 @@ class ClassSdl : public StepText
 		void PreviousNotesDisplay();// displays previous notes
 		void AddNewNoteDisplay();	//after using "add new note" option in main menu
 		void NoteScreen(); // display to read note
+		void Free();
 #pragma endregion
 		
 		SDL_Event eventHandler;		//SDL_Event handler
@@ -58,9 +51,9 @@ class ClassSdl : public StepText
 
 		int screenWidth, minScreenWidth;
 		int screenHeight, minScreenHeight;
-		int step;//on which step of app is user now
+		screen step;//on which step of app is user now
 
-		bool render;//true if something have changed since last render
+		bool render;//true if something have changed since last Render
 		
 		
 		void limitingFrames();
@@ -72,6 +65,7 @@ class ClassSdl : public StepText
 		void checkForKeyboardEvent();
 		void checkForKeyboardEvent_NoteScreen();
 		void Render();
+
 
 	public:
 

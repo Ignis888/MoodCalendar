@@ -10,6 +10,14 @@
 
 #include <windows.h>
 
+/*
+#include "ErrorsEtcClass.h"
+#include "TexClass.h"
+#include "ErrorsEtcClass.h"
+#include "StepText.h"
+#include "Button.h"
+#include "Inscription.h"
+*/
 //#include<sstream>  
 
 //#include <ctime>

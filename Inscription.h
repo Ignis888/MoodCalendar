@@ -9,7 +9,7 @@ public:
 	SDL_Surface* mSurface;
 	SDL_Texture* mTexture;
 
-	void createButton(TTF_Font*, std::string text, SDL_Color);
+	void CreateButton(TTF_Font*, std::string text, SDL_Color, screen);
 	void Render(SDL_Renderer*, int screenWidth, int screenHeight, int* shift);
 };
 
