@@ -237,7 +237,7 @@ void ClassSdl::checkForMouseEvent()
 			{
 				Button& ButtonTMP = StepTextQ[step - 1].rightColumn[nrOfActivated_Button];
 				ButtonTMP.highlighted = false;
-				step = ButtonTMP.next_step;
+				//step = ButtonTMP.DoThings();
 			
 			/*else
 				{

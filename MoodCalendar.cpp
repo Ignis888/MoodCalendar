@@ -1,5 +1,5 @@
 
-
+#include "pch.h"
 #include "ClassSdl.h"
 
 
@@ -11,8 +11,7 @@ int main(int argc, char* args[])
 	{
 		SdlC.RunProgram();
 	}
-
-
+	while (1);
 	return true;
 
 }

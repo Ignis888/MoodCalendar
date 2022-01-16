@@ -2,7 +2,10 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <codecvt>
 #include <deque>
+#include <vector>
+
 
 #include <SDL.h>
 #include <SDL_image.h>
@@ -10,10 +13,11 @@
 
 #include <windows.h>
 
+#include "ErrorsEtc.h"
 /*
-#include "ErrorsEtcClass.h"
+
 #include "TexClass.h"
-#include "ErrorsEtcClass.h"
+#include "ErrorsEtc.h"
 #include "StepText.h"
 #include "Button.h"
 #include "Inscription.h"

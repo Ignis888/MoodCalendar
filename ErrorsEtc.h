@@ -1,6 +1,5 @@
 #pragma once
 #include "pch.h"
-#include "ErrorsEtcClass.h"
 
 struct date
 {
@@ -10,12 +9,10 @@ struct date
 	//weather
 };
 
-class ErrorsEtcClass
+struct ErrorsEtc
 {
-	private:
 	void getTime(std::fstream*);
 	void getTime(tm*);
-	public:
 	bool Error(std::string, std::string, bool); // errorcontent, sdlerror, fatal-1 nonfatal-0
 };
 
@@ -32,3 +29,4 @@ enum screen
 	addNewNoteScreen,	//after using "add new note" option in main menu
 	noteScreen // display to read note
 };
+

@@ -1,8 +1,8 @@
-#include "ErrorsEtcClass.h"
+#include "ErrorsEtc.h"
 
 
 
-void ErrorsEtcClass::getTime(std::fstream* errorfile)
+void ErrorsEtc::getTime(std::fstream* errorfile)
 {
 	struct tm newtime;
 	__time64_t long_time;
@@ -17,14 +17,14 @@ void ErrorsEtcClass::getTime(std::fstream* errorfile)
 		*errorfile << newtime.tm_mon + 1 << "." << newtime.tm_year - 100 << "\n";
 	}
 }
-void ErrorsEtcClass::getTime(tm* newtime)
+void ErrorsEtc::getTime(tm* newtime)
 {
 	__time64_t long_time;
 	_time64(&long_time);
 	errno_t err = _localtime64_s(newtime, &long_time);// Convert to local time.
 }
 
-bool ErrorsEtcClass::Error(std::string errorContent, std::string sdl_errorContent, bool fatal)
+bool ErrorsEtc::Error(std::string errorContent, std::string sdl_errorContent, bool fatal)
 {
 	std::fstream errorfile;
 	errorfile.open("ErrorDetails/error.txt", std::fstream::in | std::fstream::app);

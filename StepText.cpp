@@ -26,25 +26,36 @@ void StepText::Free()
 void StepText::MakeButtons(SDL_Renderer* renderer,TTF_Font* font,std::string path,bool i_f_left_column)
 {
 	Free();
-	std::fstream dataFile;
-	dataFile.open("English/test", std::fstream::in);
+	std::wfstream dataFile(path);
 
-	if (!dataFile.is_open())
+	dataFile.imbue(std::locale(dataFile.getloc(),
+		new std::codecvt_utf8<wchar_t, 0x10ffff, std::little_endian>)); //enabling ¹, ê and otherss
+	if (!dataFile)
 	{
-		std::string errorContent = "Can't open " + path;
 		Error("Can't open ", path, 1);
 		//to do basic in english
 	}
 	else
 	{
 		Button TMPButton;
-		std::string TMPstring;
+		std::wstring textnew;
+		wchar_t* text;
+		text = (wchar_t*)malloc(100);
+
 		while(!dataFile.eof())
 		{
-			std::getline(dataFile,TMPstring);
-			if (!TMPstring.empty())
+			dataFile.getline(text, 50);
+			std::wstring textnew = std::wstring(text);
+
+			if (!textnew.empty())
 			{
-				TMPButton.CreateButton(font, TMPstring, {150,50,50}, step);
+				
+				if (TMPButton.CreateButton(font, text, { 150,50,50 }, step))
+				{
+
+					dataFile.close();
+					return;
+				}
 				if (i_f_left_column)
 				{
 					//leftColumn.push_back(TMPButton);
@@ -54,10 +65,11 @@ void StepText::MakeButtons(SDL_Renderer* renderer,TTF_Font* font,std::string pat
 					rightColumn.push_back(TMPButton);
 				}
 			}
+				
 		}
 	}
 
-	dataFile.close();
+//	dataFile.close();
 }
 
 void StepText::Render(SDL_Renderer* renderer, bool i_f_left_column, int screenWidth, int screenHeight)

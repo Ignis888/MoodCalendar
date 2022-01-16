@@ -1,8 +1,7 @@
 #pragma once
 #include "pch.h"
-#include "ErrorsEtcClass.h"
 
-class TexClass : public ErrorsEtcClass
+class TexClass
 {
 private:
 

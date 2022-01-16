@@ -24,7 +24,7 @@
     <ClCompile Include="TexClass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ErrorsEtcClass.cpp">
+    <ClCompile Include="ErrorsEtc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="StepText.cpp">
@@ -47,7 +47,7 @@
     <ClInclude Include="TexClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ErrorsEtcClass.h">
+    <ClInclude Include="ErrorsEtc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="StepText.h">

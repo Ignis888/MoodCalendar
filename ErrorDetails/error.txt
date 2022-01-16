@@ -261,3 +261,288 @@ Can't open
 	English/test
 	23:22 29.11.21
 
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	23:46 10.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:04 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:04 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:04 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:04 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:04 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:04 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:04 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:04 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:04 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:04 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:09 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:09 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:09 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:09 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:09 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:19 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:19 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:19 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:19 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:19 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:22 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:22 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:22 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:22 11.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	0:22 11.01.22
+
+
+面面面面面面面面面面面面面面面面面面面面面面面面面面
+	面面面面面面面面面面面面面面面面面面面面面面面面面面
+	21:09 11.01.22
+
+
+
+ FATAL ERROR
+面面面面面面面面面面面面面面面面面面面面面面面面面面
+	面面面面面面面面面面面面面面面面面面面面面面面面面面
+	21:09 11.01.22
+
+
+
+ FATAL ERROR
+面面面面面面面面面面面面面面面面面面面面面面面面面面
+	面面面面面面面面面面面面面面面面面面面面面面面面面面
+	21:09 11.01.22
+
+
+
+ FATAL ERROR
+面面面面面面面面面面面面面面面面面面面面面面面面面面
+	面面面面面面面面面面面面面面面面面面面面面面面面面面
+	21:09 11.01.22
+
+
+
+ FATAL ERROR
+面面面面面面面面面面面面面面面面面面面面面面面面面面
+	面面面面面面面面面面面面面面面面面面面面面面面面面面
+	21:09 11.01.22
+
+
+
+ FATAL ERROR
+Can't open 
+	English/test
+	19:11 16.01.22
+
+
+
+ FATAL ERROR
+Can't open 
+	English/test
+	19:14 16.01.22
+
+
+
+ FATAL ERROR
+Can't open 
+	English/test
+	19:15 16.01.22
+
+
+
+ FATAL ERROR
+Can't open 
+	English/test
+	19:16 16.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	There's no step like mainMenuScreen;m
+	19:16 16.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	There's no step like mainMenuScreen;m
+	19:17 16.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	There's no step like mainMenuScreen;
+	19:20 16.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	Bad format
+	19:21 16.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	There's no step like mainMenuScree
+	19:39 16.01.22
+
+
+
+ FATAL ERROR
+Can't make button
+	There's no step like mainMenuScree
+	19:40 16.01.22
+

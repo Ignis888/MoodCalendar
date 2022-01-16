@@ -30,14 +30,16 @@ void TexClass::loadFromFile(std::string path,SDL_Renderer *Render)
 	{
 		//TO DO MAKE PREMADE DEFAULT VERSION
 		std::string error = "Unable to load image: " + path;
-		Error(error, IMG_GetError(), 0);
+		ErrorsEtc Error;
+		Error.Error(error, IMG_GetError(), 0);
 		return;
 	}
 	mTexture = SDL_CreateTextureFromSurface(Render, loadedSurface);
 	if (mTexture == NULL)
 	{
 		std::string error = "Unable to Create Texture from : " + path + " in TexClass.cpp";
-		Error(error, SDL_GetError(), 1);
+		ErrorsEtc Error;
+		Error.Error(error, SDL_GetError(), 1);
 	}
 	SDL_FreeSurface(loadedSurface);	//Get rid of old loaded surface
 
@@ -52,12 +54,11 @@ void TexClass::Render(SDL_Renderer* renderer)
 	if (mTexture == NULL)
 	{
 			std::string error = "Can't Render,Texture don't exist, ";
-			Error(error, SDL_GetError(), 1);
+			ErrorsEtc Error;
+			Error.Error(error, SDL_GetError(), 1);
+			return;
 	}
-	else
-	{
-		SDL_RenderCopy(renderer, mTexture, NULL, NULL);
-	}
+	SDL_RenderCopy(renderer, mTexture, NULL, NULL);
 
 }
 void TexClass::Render(SDL_Renderer* renderer, SDL_Rect *object)
@@ -66,12 +67,11 @@ void TexClass::Render(SDL_Renderer* renderer, SDL_Rect *object)
 	if (mTexture == NULL)
 	{
 		std::string error = "Can't Render,Texture don't exist ";
-		Error(error, SDL_GetError(), 1);
+		ErrorsEtc Error;
+		Error.Error(error, SDL_GetError(), 1);
+		return;
 	}
-	else
-	{
 	//	SDL_RenderDrawRect(renderer, object);//zostawia ramke
-		SDL_RenderCopy(renderer,mTexture,NULL,object);
-	}
+	SDL_RenderCopy(renderer,mTexture,NULL,object);
 
 }

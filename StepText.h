@@ -2,7 +2,7 @@
 #include "pch.h"
 #include "Button.h"
 
-class StepText : public ErrorsEtcClass
+class StepText : public ErrorsEtc
 {
 	
 	//std::deque<Inscription> rightColumn;
